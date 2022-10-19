@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h2>Register Garage</h2>
+    </div>
+    <div id="floatContainer1" class="float-container ">
+        <label for="floatField1 ">Name</label>
+        <input type="text" id="floatField1" data-placeholder="Placeholder 1">
+    </div>
+    <div id="floatContainer2" class="float-container ">
+        <label for="floatField1 ">Contact</label>
+        <input type="text" id="floatField2" data-placeholder="Placeholder 1">
+    </div>
+    <div id="floatContainer2" class="float-container ">
+        <label for="floatField1 ">Address</label>
+        <textarea id="floatField3" rows="4"></textarea>
+    </div>
+    <div class="forImage">
+        <input type="file" multiple name="file" id="file" onchange="javascript:updateList()" />
+        <div id="fileList"></div>
+    </div>
+    <div class="checked">
+        <input class="ignoreCssC" type="checkbox" name="" id="">Agree Terms and Condition
+    </div>
+    <div class="btnofregister">
+        <button class="registerbtn">Register</button>
+    </div>
+    <script>
+        updateList = function () {
+
+            var input = document.getElementById('file');
+            var output = document.getElementById('fileList');
+            var children = "";
+            for (var i = 0; i < input.files.length; ++i) {
+                children += '<p>' + input.files.item(i).name + '</p>';
+            }
+            output.innerHTML = children;
+            // if(output.innerHTML != null){
+            //     output.style.border = '1px solid black';
+            //     output.style.padding = '10px';
+            // }
+        }
+
+    </script>
+</body>
+
+</html>
